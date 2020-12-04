@@ -12,7 +12,7 @@ for line in lines:
 
 def is_on_tree(_line: str, _position: int, _tree_char = "#") -> bool:
     chars = [char for char in _line]
-    return chars[_position] == tree_char
+    return chars[_position] == _tree_char
 
 
 def calculate_trees(
@@ -47,7 +47,6 @@ rules = [
     {"right": 7, "down": 1},
     {"right": 1, "down": 2},
 ]
-
 count_list = [
     calculate_trees(_data=data, _fn=is_on_tree, _rule=_rule) for _rule in rules
 ]
